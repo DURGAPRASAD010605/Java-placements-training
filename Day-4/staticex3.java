@@ -1,0 +1,36 @@
+import java.util.*;
+public class staticex3{
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        emp[] ob=new emp[3];
+        int empno;
+        String empname;
+         ob.companyname();
+        for(int i=0;i<3;i++){
+            System.out.print("ENtER EMP NO: ");
+            empno=sc.nextInt();
+            sc.nextLine();
+            System.out.print("ENter emp name: ");
+            empname=sc.nextLine();
+            ob[i]=new emp(empno,empname);
+        }
+        for(int i=0;i<3;i++){
+        System.out.println(ob[i].empno);
+        System.out.println(ob[i].empname);
+        System.out.println(ob[i].company);  
+    }}
+   
+}
+class emp{
+    int empno;
+    String empname;
+    static String company="";
+    public emp(int emp,String name){
+        empno=emp;
+        empname=name;
+    }
+    public static void companyname(){
+        company="kuppam";
+    }
+    
+}
